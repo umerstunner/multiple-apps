@@ -1,0 +1,17 @@
+
+> job-app@0.1.0 dev
+> next dev -p 3001
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.56.1:3001
+- Environments: .env.local
+✓ Ready in 7.3s
+Creating turbopack project {
+  dir: 'E:\\tc work office taiba creations\\FirstApp\\job-app',
+  testMode: true
+}
+○ Compiling proxy ...
+- Cache Components enabled
+
+✓ Finished filesystem cache database compaction in 20.9s
