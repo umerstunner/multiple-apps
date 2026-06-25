@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
 	Cake,
 	CalendarDays,
@@ -51,6 +51,7 @@ function calculateAge(birthDate: Date) {
 export default function AgeCalculatorApp() {
 	const [birthDate, setBirthDate] = useState("");
 	const [error, setError] = useState("");
+	const [maxDate, setMaxDate] = useState("");
 
 	const result = useMemo(() => {
 		if (!birthDate) return null;
@@ -71,7 +72,10 @@ export default function AgeCalculatorApp() {
 		return calculateAge(parsed);
 	}, [birthDate]);
 
-	const maxDate = new Date().toISOString().split("T")[0];
+
+	useEffect(() => {
+		setMaxDate(new Date().toISOString().split("T")[0]);
+	}, []);
 
 	return (
 		<IdeasShell slug="age-calculator">
